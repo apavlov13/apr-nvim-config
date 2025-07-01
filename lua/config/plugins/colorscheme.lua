@@ -1,7 +1,18 @@
 return {
     "askfiy/visual_studio_code",
+    "webhooked/kanso.nvim",
+    lazy = false,
     priority = 100,
-    config = function()
-        vim.cmd([[colorscheme visual_studio_code]])
-    end,
+
+    config = function ()
+        require("kanso").setup({
+            theme = "mist",
+            background = {
+                light = "pearl",
+                dark = "mist",
+            },
+        })
+    end
 }
+
+
